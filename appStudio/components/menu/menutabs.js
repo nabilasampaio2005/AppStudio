@@ -1,111 +1,110 @@
 import * as React from 'react';
-import { View, StyleSheet, Text} from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome5'; 
-
-//import LinearGradient from 'react-native-linear-gradient';
-
- 
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import GerenciarProdutos from '../../components/Produtos/gerenciarproduto';
 
 function HomeScreen() {
+
     return (
         <View style={styles.container}>
             <Text></Text>
         </View>
     );
 }
-
- 
 
 function ListScreen() {
+
     return (
         <View style={styles.container}>
             <Text></Text>
         </View>
     );
+
 }
 
- 
+function ProdutosScreen() {
 
-function PostScreen() {
-    return <Produtos />
+    return <GerenciarProdutos />
+
 }
-
- 
-
 function NotificationsScreen() {
+
     return (
         <View style={styles.container}>
             <Text></Text>
         </View>
-    );
-}
 
- 
+    );
+
+}
 
 const Tab = createBottomTabNavigator();
 
- 
-
 export default function Menu() {
+
     return (
+
         <NavigationContainer>
+
             <Tab.Navigator
+
                 screenOptions={({ route }) => ({
                     tabBarIcon: ({ color, size }) => {
                         let iconName;
-
- 
-
+                        
                         switch (route.name) {
+
                             case 'Home':
                                 iconName = 'home';
                                 break;
+
                             case 'Listar':
-                                iconName = 'list';
+                                iconName = 'bars';
                                 break;
-                            case 'Tatugens':
+
+                            case 'Tattoo':
                                 iconName = 'palette';
                                 break;
+
                             case 'Ler API':
-                                iconName = 'bell';
+                                iconName = 'book';
                                 break;
+
                             default:
                                 iconName = 'add-circle-outline';
                                 break;
+
                         }
-
- 
-
                         return <Icon name={iconName} size={size} color={color} />;
                     },
+
                 })}
                 tabBarOptions={{
                     activeTintColor: '#4682B4',
                     inactiveTintColor: '#777',
                     showLabel: true,
+
                 }}
             >
                 <Tab.Screen name="Home" component={HomeScreen} />
                 <Tab.Screen name="Listar" component={ListScreen} />
                 <Tab.Screen
                     name="Tattoo"
-                    component={PostScreen}
+                    component={ProdutosScreen}
                 />
                 <Tab.Screen name="Ler API" component={NotificationsScreen} />
-                </Tab.Navigator>
+            </Tab.Navigator>
         </NavigationContainer>
     );
 }
-
- 
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+
     },
     iconTabRound: {
         width: 60,
@@ -121,4 +120,5 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.2,
         shadowRadius: 5,
     }
+
 });
