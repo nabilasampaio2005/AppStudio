@@ -4,9 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import GerenciarProdutos from '../../components/Produtos/gerenciarproduto';
+import Perfil from '../../components/Perfil/perfil'; 
 
 function HomeScreen() {
-
     return (
         <View style={styles.container}>
             <Text></Text>
@@ -15,30 +15,22 @@ function HomeScreen() {
 }
 
 function ListScreen() {
-
-    return (
-        <View style={styles.container}>
-            <Text></Text>
-        </View>
-    );
-
+    return <Perfil />
 }
 
 function ProdutosScreen() {
-
     return <GerenciarProdutos />
-
 }
+
 function NotificationsScreen() {
 
     return (
         <View style={styles.container}>
             <Text></Text>
         </View>
-
     );
-
 }
+
 
 const Tab = createBottomTabNavigator();
 
@@ -60,8 +52,8 @@ export default function Menu() {
                                 iconName = 'home';
                                 break;
 
-                            case 'Listar':
-                                iconName = 'bars';
+                            case 'Perfil':
+                                iconName = 'user';
                                 break;
 
                             case 'Tattoo':
@@ -89,7 +81,7 @@ export default function Menu() {
                 }}
             >
                 <Tab.Screen name="Home" component={HomeScreen} />
-                <Tab.Screen name="Listar" component={ListScreen} />
+                <Tab.Screen name="Perfil" component={ListScreen} />
                 <Tab.Screen
                     name="Tattoo"
                     component={ProdutosScreen}
