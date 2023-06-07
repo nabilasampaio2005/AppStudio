@@ -92,7 +92,7 @@ export default function Perfil() {
             <Separator />
             <TextInput
                 placeholder='Nome'
-                left={<TextInput.Icon icon="user" />}
+                left={<TextInput.Icon icon="tag" />}
                 maxLength={40}
                 style={styles.input}
                 onChangeText={(text) => setNome(text)}
@@ -135,6 +135,7 @@ export default function Perfil() {
                 value={estado}
             />
 
+            <Separator />
             <View
                 style={styles.button}>
                 <Button

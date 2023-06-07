@@ -88,7 +88,7 @@ export default function GerenciarProdutos() {
     <Separator/>
             <TextInput 
                 placeholder='Produto' 
-                left={<TextInput.Icon icon="edit" />} 
+                left={<TextInput.Icon icon="car" />} 
                 maxLength={40} 
                 style={styles.input} 
                 onChangeText={(text) => setNome(text)} 
@@ -120,7 +120,8 @@ export default function GerenciarProdutos() {
                 style={styles.input} 
                 onChangeText={(text) => setCor(text)} 
                 value={cor} 
-            />                  
+            />   
+    <Separator/>               
         <View 
                 style={styles.button}> 
         <Button 

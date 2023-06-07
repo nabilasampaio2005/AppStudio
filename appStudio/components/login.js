@@ -71,7 +71,7 @@ export default function Login({changeStatus}) {
       </SafeAreaView>
 
       <TouchableOpacity
-                style={[styles.handleLogin,
+                style={[styles.handleLogin, 
                 { backgroundColor: type === 'login' ? '#038bbb' : '#8B9EE0' }]}
                 onPress={handleLogin}
             >
@@ -109,13 +109,14 @@ const styles = StyleSheet.create({
   handleLogin:{ 
     alignItems: 'center', 
     justifyContent:'center', 
-    height: 40, 
-    marginTop:35,
+    height: 50, 
+    marginTop:15,
     marginLeft: 30, 
+    borderRadius: 20,
   }, 
   loginText:{ 
     color: '##8B9EE0', 
     fontSize: 24, 
+    
   }, 
 });
-
