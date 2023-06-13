@@ -5,9 +5,10 @@ import 'firebase/compat/auth';
 //trabalha com o banco de dados criado no firebase
 import 'firebase/compat/database';
 
-let firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyA1AE7Sg5vf8JgRIUEJIzofSuMoF7egQQE",
   authDomain: "dbstudio-81eb6.firebaseapp.com",
+  databaseURL: "https://dbstudio-81eb6-default-rtdb.firebaseio.com",
   projectId: "dbstudio-81eb6",
   storageBucket: "dbstudio-81eb6.appspot.com",
   messagingSenderId: "759213811335",
